@@ -5,7 +5,7 @@ Imports System.IO
 Public Class SuperVideoStore
 
     Sub ReadfromFile()
-        Dim filepath As String = "../../UserData.txt" 'Emails for VB.txt
+        Dim filepath As String = "..\..\..\Emails for VB.txt" 'Emails for VB.txt
         Dim fileNumber As Integer = FreeFile()
         Dim currentRecord As String = ""
         Try
