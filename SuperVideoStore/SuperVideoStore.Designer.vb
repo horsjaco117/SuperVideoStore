@@ -45,6 +45,8 @@ Partial Class SuperVideoStore
         RadioButton1 = New RadioButton()
         ExitButton = New Button()
         UpdateButton = New Button()
+        Button1 = New Button()
+        ListBox1 = New ListBox()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         SuspendLayout()
@@ -253,11 +255,31 @@ Partial Class SuperVideoStore
         UpdateButton.Text = "Update"
         UpdateButton.UseVisualStyleBackColor = True
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(1109, 656)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(112, 34)
+        Button1.TabIndex = 4
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' ListBox1
+        ' 
+        ListBox1.FormattingEnabled = True
+        ListBox1.ItemHeight = 25
+        ListBox1.Location = New Point(169, 555)
+        ListBox1.Name = "ListBox1"
+        ListBox1.Size = New Size(180, 129)
+        ListBox1.TabIndex = 27
+        ' 
         ' SuperVideoStore
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1280, 779)
+        Controls.Add(ListBox1)
+        Controls.Add(Button1)
         Controls.Add(UpdateButton)
         Controls.Add(ExitButton)
         Controls.Add(GroupBox2)
@@ -309,5 +331,7 @@ Partial Class SuperVideoStore
     Friend WithEvents LastNameTextBox As TextBox
     Friend WithEvents ExitButton As Button
     Friend WithEvents UpdateButton As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ListBox1 As ListBox
 
 End Class
