@@ -12,6 +12,7 @@ Partial Class SuperVideoStore
         Finally
             MyBase.Dispose(disposing)
         End Try
+
     End Sub
 
     'Required by the Windows Form Designer
@@ -23,25 +24,41 @@ Partial Class SuperVideoStore
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        FirstNameTextBox = New TextBox()
-        Me.LastNameTextBox = New TextBox()
-        Me.CityTextBox = New TextBox()
-        Me.StateTextBox = New TextBox()
-        Me.ZipTextBox = New TextBox()
-        Me.PhoneNumberTextBox = New TextBox()
-        Me.EmailAddressTextBox = New TextBox()
-        FirstNameLabel = New Label()
-        LastNameLabel = New Label()
-        CityLabel = New Label()
-        StateLabel = New Label()
-        ZipLabel = New Label()
-        PhoneNumberLabel = New Label()
+        EmailTextBox = New TextBox()
+        PhoneTextBox = New TextBox()
+        ZipTextBox = New TextBox()
+        StateTextBox = New TextBox()
+        CityTextBox = New TextBox()
+        LastNameTextBox = New TextBox()
+        CustomerIDLabel = New Label()
+        CustomerIDTextBox = New TextBox()
         EmailLabel = New Label()
+        PhoneNumberLabel = New Label()
+        ZipLabel = New Label()
+        StateLabel = New Label()
+        CityLabel = New Label()
+        LastNameLabel = New Label()
+        FirstNameLabel = New Label()
+        FirstNameTextBox = New TextBox()
+        GroupBox2 = New GroupBox()
+        RadioButton2 = New RadioButton()
+        RadioButton1 = New RadioButton()
+        ExitButton = New Button()
+        UpdateButton = New Button()
         GroupBox1.SuspendLayout()
+        GroupBox2.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(EmailTextBox)
+        GroupBox1.Controls.Add(PhoneTextBox)
+        GroupBox1.Controls.Add(ZipTextBox)
+        GroupBox1.Controls.Add(StateTextBox)
+        GroupBox1.Controls.Add(CityTextBox)
+        GroupBox1.Controls.Add(LastNameTextBox)
+        GroupBox1.Controls.Add(CustomerIDLabel)
+        GroupBox1.Controls.Add(CustomerIDTextBox)
         GroupBox1.Controls.Add(EmailLabel)
         GroupBox1.Controls.Add(PhoneNumberLabel)
         GroupBox1.Controls.Add(ZipLabel)
@@ -49,12 +66,6 @@ Partial Class SuperVideoStore
         GroupBox1.Controls.Add(CityLabel)
         GroupBox1.Controls.Add(LastNameLabel)
         GroupBox1.Controls.Add(FirstNameLabel)
-        GroupBox1.Controls.Add(Me.EmailAddressTextBox)
-        GroupBox1.Controls.Add(Me.PhoneNumberTextBox)
-        GroupBox1.Controls.Add(Me.ZipTextBox)
-        GroupBox1.Controls.Add(Me.StateTextBox)
-        GroupBox1.Controls.Add(Me.CityTextBox)
-        GroupBox1.Controls.Add(Me.LastNameTextBox)
         GroupBox1.Controls.Add(FirstNameTextBox)
         GroupBox1.Location = New Point(0, 0)
         GroupBox1.Name = "GroupBox1"
@@ -63,108 +74,63 @@ Partial Class SuperVideoStore
         GroupBox1.TabStop = False
         GroupBox1.Text = "GroupBox1"
         ' 
-        ' FirstNameTextBox
+        ' EmailTextBox
         ' 
-        FirstNameTextBox.Location = New Point(25, 61)
-        FirstNameTextBox.Name = "FirstNameTextBox"
-        FirstNameTextBox.Size = New Size(150, 31)
-        FirstNameTextBox.TabIndex = 0
+        EmailTextBox.Location = New Point(380, 67)
+        EmailTextBox.Name = "EmailTextBox"
+        EmailTextBox.Size = New Size(150, 31)
+        EmailTextBox.TabIndex = 26
         ' 
-        ' LastNameTextBox
+        ' PhoneTextBox
         ' 
-        Me.LastNameTextBox.Location = New Point(25, 129)
-        Me.LastNameTextBox.Name = "LastNameTextBox"
-        Me.LastNameTextBox.Size = New Size(150, 31)
-        Me.LastNameTextBox.TabIndex = 1
-        ' 
-        ' CityTextBox
-        ' 
-        Me.CityTextBox.Location = New Point(25, 195)
-        Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New Size(150, 31)
-        Me.CityTextBox.TabIndex = 2
-        ' 
-        ' StateTextBox
-        ' 
-        Me.StateTextBox.Location = New Point(25, 266)
-        Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New Size(150, 31)
-        Me.StateTextBox.TabIndex = 3
+        PhoneTextBox.Location = New Point(25, 414)
+        PhoneTextBox.Name = "PhoneTextBox"
+        PhoneTextBox.Size = New Size(150, 31)
+        PhoneTextBox.TabIndex = 25
         ' 
         ' ZipTextBox
         ' 
-        Me.ZipTextBox.Location = New Point(25, 340)
-        Me.ZipTextBox.Name = "ZipTextBox"
-        Me.ZipTextBox.Size = New Size(150, 31)
-        Me.ZipTextBox.TabIndex = 4
+        ZipTextBox.Location = New Point(25, 340)
+        ZipTextBox.Name = "ZipTextBox"
+        ZipTextBox.Size = New Size(150, 31)
+        ZipTextBox.TabIndex = 24
         ' 
-        ' PhoneNumberTextBox
+        ' StateTextBox
         ' 
-        Me.PhoneNumberTextBox.Location = New Point(25, 403)
-        Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New Size(150, 31)
-        Me.PhoneNumberTextBox.TabIndex = 5
+        StateTextBox.Location = New Point(12, 266)
+        StateTextBox.Name = "StateTextBox"
+        StateTextBox.Size = New Size(150, 31)
+        StateTextBox.TabIndex = 23
         ' 
-        ' EmailAddressTextBox
+        ' CityTextBox
         ' 
-        Me.EmailAddressTextBox.Location = New Point(380, 61)
-        Me.EmailAddressTextBox.Name = "EmailAddressTextBox"
-        Me.EmailAddressTextBox.Size = New Size(150, 31)
-        Me.EmailAddressTextBox.TabIndex = 6
+        CityTextBox.Location = New Point(12, 195)
+        CityTextBox.Name = "CityTextBox"
+        CityTextBox.Size = New Size(150, 31)
+        CityTextBox.TabIndex = 22
         ' 
-        ' FirstNameLabel
+        ' LastNameTextBox
         ' 
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New Point(25, 33)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New Size(97, 25)
-        FirstNameLabel.TabIndex = 12
-        FirstNameLabel.Text = "First Name"
+        LastNameTextBox.Location = New Point(25, 129)
+        LastNameTextBox.Name = "LastNameTextBox"
+        LastNameTextBox.Size = New Size(116, 31)
+        LastNameTextBox.TabIndex = 21
         ' 
-        ' LastNameLabel
+        ' CustomerIDLabel
         ' 
-        LastNameLabel.AutoSize = True
-        LastNameLabel.Location = New Point(25, 101)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New Size(95, 25)
-        LastNameLabel.TabIndex = 13
-        LastNameLabel.Text = "Last Name"
+        CustomerIDLabel.AutoSize = True
+        CustomerIDLabel.Location = New Point(380, 101)
+        CustomerIDLabel.Name = "CustomerIDLabel"
+        CustomerIDLabel.Size = New Size(112, 25)
+        CustomerIDLabel.TabIndex = 20
+        CustomerIDLabel.Text = "Customer ID"
         ' 
-        ' CityLabel
+        ' CustomerIDTextBox
         ' 
-        CityLabel.AutoSize = True
-        CityLabel.Location = New Point(25, 167)
-        CityLabel.Name = "CityLabel"
-        CityLabel.Size = New Size(42, 25)
-        CityLabel.TabIndex = 14
-        CityLabel.Text = "City"
-        ' 
-        ' StateLabel
-        ' 
-        StateLabel.AutoSize = True
-        StateLabel.Location = New Point(25, 238)
-        StateLabel.Name = "StateLabel"
-        StateLabel.Size = New Size(51, 25)
-        StateLabel.TabIndex = 15
-        StateLabel.Text = "State"
-        ' 
-        ' ZipLabel
-        ' 
-        ZipLabel.AutoSize = True
-        ZipLabel.Location = New Point(25, 312)
-        ZipLabel.Name = "ZipLabel"
-        ZipLabel.Size = New Size(37, 25)
-        ZipLabel.TabIndex = 16
-        ZipLabel.Text = "Zip"
-        ' 
-        ' PhoneNumberLabel
-        ' 
-        PhoneNumberLabel.AutoSize = True
-        PhoneNumberLabel.Location = New Point(25, 375)
-        PhoneNumberLabel.Name = "PhoneNumberLabel"
-        PhoneNumberLabel.Size = New Size(132, 25)
-        PhoneNumberLabel.TabIndex = 17
-        PhoneNumberLabel.Text = "Phone Number"
+        CustomerIDTextBox.Location = New Point(380, 129)
+        CustomerIDTextBox.Name = "CustomerIDTextBox"
+        CustomerIDTextBox.Size = New Size(150, 31)
+        CustomerIDTextBox.TabIndex = 19
         ' 
         ' EmailLabel
         ' 
@@ -175,16 +141,133 @@ Partial Class SuperVideoStore
         EmailLabel.TabIndex = 18
         EmailLabel.Text = "Email Address"
         ' 
+        ' PhoneNumberLabel
+        ' 
+        PhoneNumberLabel.AutoSize = True
+        PhoneNumberLabel.Location = New Point(25, 375)
+        PhoneNumberLabel.Name = "PhoneNumberLabel"
+        PhoneNumberLabel.Size = New Size(132, 25)
+        PhoneNumberLabel.TabIndex = 17
+        PhoneNumberLabel.Text = "Phone Number"
+        ' 
+        ' ZipLabel
+        ' 
+        ZipLabel.AutoSize = True
+        ZipLabel.Location = New Point(25, 312)
+        ZipLabel.Name = "ZipLabel"
+        ZipLabel.Size = New Size(37, 25)
+        ZipLabel.TabIndex = 16
+        ZipLabel.Text = "Zip"
+        ' 
+        ' StateLabel
+        ' 
+        StateLabel.AutoSize = True
+        StateLabel.Location = New Point(25, 238)
+        StateLabel.Name = "StateLabel"
+        StateLabel.Size = New Size(51, 25)
+        StateLabel.TabIndex = 15
+        StateLabel.Text = "State"
+        ' 
+        ' CityLabel
+        ' 
+        CityLabel.AutoSize = True
+        CityLabel.Location = New Point(25, 167)
+        CityLabel.Name = "CityLabel"
+        CityLabel.Size = New Size(42, 25)
+        CityLabel.TabIndex = 14
+        CityLabel.Text = "City"
+        ' 
+        ' LastNameLabel
+        ' 
+        LastNameLabel.AutoSize = True
+        LastNameLabel.Location = New Point(25, 101)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New Size(95, 25)
+        LastNameLabel.TabIndex = 13
+        LastNameLabel.Text = "Last Name"
+        ' 
+        ' FirstNameLabel
+        ' 
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New Point(25, 33)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New Size(97, 25)
+        FirstNameLabel.TabIndex = 12
+        FirstNameLabel.Text = "First Name"
+        ' 
+        ' FirstNameTextBox
+        ' 
+        FirstNameTextBox.Location = New Point(25, 61)
+        FirstNameTextBox.Name = "FirstNameTextBox"
+        FirstNameTextBox.Size = New Size(150, 31)
+        FirstNameTextBox.TabIndex = 0
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(RadioButton2)
+        GroupBox2.Controls.Add(RadioButton1)
+        GroupBox2.Location = New Point(796, 23)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(442, 411)
+        GroupBox2.TabIndex = 1
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "GroupBox2"
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Location = New Point(63, 130)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(146, 29)
+        RadioButton2.TabIndex = 1
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "RadioButton2"
+        RadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Location = New Point(52, 59)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(146, 29)
+        RadioButton1.TabIndex = 0
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "RadioButton1"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' ExitButton
+        ' 
+        ExitButton.Location = New Point(953, 650)
+        ExitButton.Name = "ExitButton"
+        ExitButton.Size = New Size(112, 34)
+        ExitButton.TabIndex = 2
+        ExitButton.Text = "Exit"
+        ExitButton.UseVisualStyleBackColor = True
+        ' 
+        ' UpdateButton
+        ' 
+        UpdateButton.Location = New Point(796, 650)
+        UpdateButton.Name = "UpdateButton"
+        UpdateButton.Size = New Size(112, 34)
+        UpdateButton.TabIndex = 3
+        UpdateButton.Text = "Update"
+        UpdateButton.UseVisualStyleBackColor = True
+        ' 
         ' SuperVideoStore
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1280, 779)
+        Controls.Add(UpdateButton)
+        Controls.Add(ExitButton)
+        Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Name = "SuperVideoStore"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -213,5 +296,18 @@ Partial Class SuperVideoStore
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents FirstNameTextBox As TextBox
+    Friend WithEvents CustomerIDLabel As Label
+    Friend WithEvents CustomerIDTextBox As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents EmailTextBox As TextBox
+    Friend WithEvents PhoneTextBox As TextBox
+    Friend WithEvents ZipTextBox As TextBox
+    Friend WithEvents StateTextBox As TextBox
+    Friend WithEvents CityTextBox As TextBox
+    Friend WithEvents LastNameTextBox As TextBox
+    Friend WithEvents ExitButton As Button
+    Friend WithEvents UpdateButton As Button
 
 End Class
